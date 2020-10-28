@@ -20,6 +20,7 @@ public class MaquinaExpendedoraMejorada {
      */
     public MaquinaExpendedoraMejorada(int precioDelBillete, String origen, String destino) {
         precioBillete = precioDelBillete;
+        billetesVendidos = 0;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
         estacionOrigen = origen;
