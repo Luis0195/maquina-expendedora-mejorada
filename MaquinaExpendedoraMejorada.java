@@ -49,6 +49,13 @@ public class MaquinaExpendedoraMejorada {
             System.out.println(cantidadIntroducida + " no es una cantidad de dinero valida.");
         }        
     }
+    
+    /**
+     * Retira todo el dinero
+     */
+    public int vaciarDineroDeLaMaquina () {
+        return balanceClienteActual + totalDineroAcumulado;
+    }
 
     /**
      * Imprime un billete para el cliente actual
