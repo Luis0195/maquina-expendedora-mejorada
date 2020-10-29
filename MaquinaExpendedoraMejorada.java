@@ -16,6 +16,8 @@ public class MaquinaExpendedoraMejorada {
     private boolean maquinaConPremio;
     // Numero maximo billetes
     private int billetesMaximos;
+    // premio
+    private int premioAsegurado;
 
     /**
      * Crea una maquina expendedora de billetes de tren con el 
@@ -31,6 +33,7 @@ public class MaquinaExpendedoraMejorada {
         estacionDestino = destino;
         maquinaConPremio = tienePremio;
         billetesMaximos = numBilletesMax;
+        premioAsegurado = 0;
     }
 
     /**
@@ -101,7 +104,14 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("##################");
                 System.out.println();
                 if (maquinaConPremio == true) {
-                    System.out.println("Tienes " + precioBillete * 10 / 100F + " euros de descuento en Bershka presentando este billete");
+                    if (premioAsegurado == 3) {
+                        System.out.println("Tienes " + precioBillete * 10 / 100F + " euros de descuento en Bershka presentando este billete");
+                    }
+                    else {
+                        System.out.println("Mala suerte, no hay descuento");
+                        System.out.println("Quedan " + (3-premioAsegurado) + " billetes para el descuento");
+                        premioAsegurado +=1;
+                    }
                 }
                 else {
                     System.out.println("No tienes descuento");
